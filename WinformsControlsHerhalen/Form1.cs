@@ -16,11 +16,11 @@ namespace WinformsControlsHerhalen
         {
             InitializeComponent();
         }
-        SeedCountry seedCountry = new SeedCountry();
-        SeedPeople seedPeople = new SeedPeople();
+        
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            SeedCountry seedCountry = new SeedCountry();
+            SeedPeople seedPeople = new SeedPeople();
             //var allPeople = SeedPeople.GetPeople();  
             IEnumerable<Person> allPeople = seedPeople.People;
 
@@ -48,6 +48,7 @@ namespace WinformsControlsHerhalen
 
         private void btnFilterByAge_Click(object sender, EventArgs e)
         {
+            SeedPeople seedPeople = new SeedPeople();
             try
             {
                 IEnumerable<Person> listPerAge = seedPeople.People.Where(x => x.Age == Convert.ToInt32(txtFilter.Text)).ToList();
@@ -70,6 +71,7 @@ namespace WinformsControlsHerhalen
 
         private void btnFilterByCountry_Click(object sender, EventArgs e)
         {
+            SeedPeople seedPeople = new SeedPeople();
             try
             {
 
@@ -84,6 +86,7 @@ namespace WinformsControlsHerhalen
         }
         private void cmbCountry_SelectedIndexChanged(object sender, EventArgs e)
         {
+            SeedPeople seedPeople = new SeedPeople();
             // With Lambda
 
             //int selected = cmbCountry.SelectedIndex + 1;
@@ -104,6 +107,7 @@ namespace WinformsControlsHerhalen
         }
         private void btnFindPerson_Click(object sender, EventArgs e)
         {
+            SeedPeople seedPeople = new SeedPeople();
             var person = seedPeople.People.Find(x => x.Id == (Convert.ToInt32(txtFilter.Text)));
             lstDemo.Items.Add(person);
         }
