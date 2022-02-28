@@ -16,7 +16,7 @@ namespace WinformsControlsHerhalen
         {
             InitializeComponent();
         }
-        
+        //bij iedere methode een nieuwe instantie maken
         private void Form1_Load(object sender, EventArgs e)
         {
             SeedCountry seedCountry = new SeedCountry();
