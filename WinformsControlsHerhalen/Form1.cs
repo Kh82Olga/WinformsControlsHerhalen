@@ -16,11 +16,13 @@ namespace WinformsControlsHerhalen
         {
             InitializeComponent();
         }
-
+        SeedCountry seedCountry = new SeedCountry();
+        SeedPeople seedPeople = new SeedPeople();
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             //var allPeople = SeedPeople.GetPeople();  
-            IEnumerable<Person> allPeople = SeedPeople.People;
+            IEnumerable<Person> allPeople = seedPeople.People;
 
             foreach (var item in allPeople)
             {
@@ -29,14 +31,14 @@ namespace WinformsControlsHerhalen
 
             // lstAllPeople.DataSource = allPeople;  
 
-            IEnumerable<Country> allCountries = SeedCountry.GetCountries();
+            IEnumerable<Country> allCountries = seedCountry.Countries;
             foreach (var item in allCountries)
             {
                 lstAllCountries.Items.Add(item);
 
             }
 
-            IEnumerable<Country> allCountriesForComboBox = SeedCountry.Countries;
+            IEnumerable<Country> allCountriesForComboBox = seedCountry.Countries;
             foreach (var item in allCountriesForComboBox)
             {
                 cmbCountry.Items.Add(item);
@@ -48,7 +50,7 @@ namespace WinformsControlsHerhalen
         {
             try
             {
-                IEnumerable<Person> listPerAge = SeedPeople.People.Where(x => x.Age == Convert.ToInt32(txtFilter.Text)).ToList();
+                IEnumerable<Person> listPerAge = seedPeople.People.Where(x => x.Age == Convert.ToInt32(txtFilter.Text)).ToList();
                 lstDemo.DataSource = listPerAge;
             }
             catch (Exception ex)
@@ -71,7 +73,7 @@ namespace WinformsControlsHerhalen
             try
             {
 
-              IEnumerable<Person>list = SeedPeople.People.Where(x => x.Country== Convert.ToInt32(txtFilter.Text)).ToList();
+              IEnumerable<Person>list = seedPeople.People.Where(x => x.Country== Convert.ToInt32(txtFilter.Text)).ToList();
               lstDemo.DataSource = list;
             }
             catch(Exception ex)
@@ -91,7 +93,7 @@ namespace WinformsControlsHerhalen
 
             lstDemo.Items.Clear();
             int selected = cmbCountry.SelectedIndex + 1;
-            IEnumerable<Person> people = SeedPeople.People;
+            IEnumerable<Person> people = seedPeople.People;
             foreach (var person in people)
             {
                 if (person.Country==selected)
@@ -102,7 +104,7 @@ namespace WinformsControlsHerhalen
         }
         private void btnFindPerson_Click(object sender, EventArgs e)
         {
-            var person = SeedPeople.People.Find(x => x.Id == (Convert.ToInt32(txtFilter.Text)));
+            var person = seedPeople.People.Find(x => x.Id == (Convert.ToInt32(txtFilter.Text)));
             lstDemo.Items.Add(person);
         }
     }

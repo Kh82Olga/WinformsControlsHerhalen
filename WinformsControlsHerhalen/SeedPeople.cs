@@ -8,9 +8,12 @@ namespace WinformsControlsHerhalen
 {
     public class SeedPeople
     {
-        //static public List<Person> People = new List<Person>();
-        static private List<Person> list { get; set; }
-        static public List<Person> People
+        public SeedPeople()
+        {
+            list = new List<Person>();
+        }
+        public List<Person> list { get; set; }
+        public List<Person> People
         {
             get 
             { 
@@ -18,7 +21,7 @@ namespace WinformsControlsHerhalen
             }
         }
 
-        static private List<Person>GetPeople()
+        public List<Person>GetPeople()
         {
             list = new List<Person>();
             var p1 = new Person() { Id = 1, FirstName = "Anass", LastName = "ElLAmzi", Age=  27, IsVip=  false, Country=  1 };

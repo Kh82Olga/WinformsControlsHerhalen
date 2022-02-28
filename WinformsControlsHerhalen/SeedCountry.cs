@@ -8,10 +8,14 @@ namespace WinformsControlsHerhalen
 {
     public class SeedCountry
     {
-        static public List<Country> listCountries { get; set; }
+        public SeedCountry()
+        {
+            listCountries = new List<Country>();
+        }
+        public List<Country> listCountries { get; set; }
         
 
-        static public List<Country> Countries
+        public List<Country> Countries
         {
             get 
             { 
@@ -20,7 +24,7 @@ namespace WinformsControlsHerhalen
             
         }
 
-        static public List<Country>GetCountries()
+        public List<Country>GetCountries()
         {
             listCountries= new List<Country>();
             var c1 = new Country() { Id = 1, Name = "Belgium" };
