@@ -44,46 +44,48 @@
             // lstAllPeople
             // 
             this.lstAllPeople.FormattingEnabled = true;
-            this.lstAllPeople.ItemHeight = 20;
-            this.lstAllPeople.Location = new System.Drawing.Point(43, 74);
+            this.lstAllPeople.Location = new System.Drawing.Point(29, 48);
+            this.lstAllPeople.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstAllPeople.Name = "lstAllPeople";
-            this.lstAllPeople.Size = new System.Drawing.Size(713, 84);
+            this.lstAllPeople.Size = new System.Drawing.Size(477, 56);
             this.lstAllPeople.TabIndex = 0;
             // 
             // lblAllPeople
             // 
             this.lblAllPeople.AutoSize = true;
             this.lblAllPeople.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAllPeople.Location = new System.Drawing.Point(43, 51);
+            this.lblAllPeople.Location = new System.Drawing.Point(29, 33);
+            this.lblAllPeople.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblAllPeople.Name = "lblAllPeople";
-            this.lblAllPeople.Size = new System.Drawing.Size(89, 20);
+            this.lblAllPeople.Size = new System.Drawing.Size(64, 13);
             this.lblAllPeople.TabIndex = 1;
             this.lblAllPeople.Text = "All People";
             // 
             // lstAllCountries
             // 
             this.lstAllCountries.FormattingEnabled = true;
-            this.lstAllCountries.ItemHeight = 20;
-            this.lstAllCountries.Location = new System.Drawing.Point(47, 244);
+            this.lstAllCountries.Location = new System.Drawing.Point(29, 170);
+            this.lstAllCountries.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstAllCountries.Name = "lstAllCountries";
-            this.lstAllCountries.Size = new System.Drawing.Size(713, 84);
+            this.lstAllCountries.Size = new System.Drawing.Size(477, 56);
             this.lstAllCountries.TabIndex = 2;
             // 
             // lstDemo
             // 
             this.lstDemo.FormattingEnabled = true;
-            this.lstDemo.ItemHeight = 20;
-            this.lstDemo.Location = new System.Drawing.Point(47, 325);
+            this.lstDemo.Location = new System.Drawing.Point(29, 242);
+            this.lstDemo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lstDemo.Name = "lstDemo";
-            this.lstDemo.Size = new System.Drawing.Size(713, 84);
+            this.lstDemo.Size = new System.Drawing.Size(477, 56);
             this.lstDemo.TabIndex = 3;
             // 
             // btnFilterByAge
             // 
             this.btnFilterByAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFilterByAge.Location = new System.Drawing.Point(47, 415);
+            this.btnFilterByAge.Location = new System.Drawing.Point(29, 327);
+            this.btnFilterByAge.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFilterByAge.Name = "btnFilterByAge";
-            this.btnFilterByAge.Size = new System.Drawing.Size(159, 36);
+            this.btnFilterByAge.Size = new System.Drawing.Size(106, 23);
             this.btnFilterByAge.TabIndex = 4;
             this.btnFilterByAge.Text = "Filter By Age";
             this.btnFilterByAge.UseVisualStyleBackColor = true;
@@ -91,27 +93,30 @@
             // 
             // txtFilter
             // 
-            this.txtFilter.Location = new System.Drawing.Point(43, 22);
+            this.txtFilter.Location = new System.Drawing.Point(29, 14);
+            this.txtFilter.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtFilter.Name = "txtFilter";
-            this.txtFilter.Size = new System.Drawing.Size(100, 26);
+            this.txtFilter.Size = new System.Drawing.Size(68, 20);
             this.txtFilter.TabIndex = 5;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(43, -1);
+            this.label1.Location = new System.Drawing.Point(29, -1);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(162, 20);
+            this.label1.Size = new System.Drawing.Size(113, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "Enter Filter Criteria";
             // 
             // btnFilterByCountry
             // 
             this.btnFilterByCountry.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFilterByCountry.Location = new System.Drawing.Point(267, 415);
+            this.btnFilterByCountry.Location = new System.Drawing.Point(179, 327);
+            this.btnFilterByCountry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFilterByCountry.Name = "btnFilterByCountry";
-            this.btnFilterByCountry.Size = new System.Drawing.Size(189, 37);
+            this.btnFilterByCountry.Size = new System.Drawing.Size(126, 24);
             this.btnFilterByCountry.TabIndex = 7;
             this.btnFilterByCountry.Text = "Filter By Country";
             this.btnFilterByCountry.UseVisualStyleBackColor = true;
@@ -119,9 +124,10 @@
             // cmbCountry
             // 
             this.cmbCountry.FormattingEnabled = true;
-            this.cmbCountry.Location = new System.Drawing.Point(47, 210);
+            this.cmbCountry.Location = new System.Drawing.Point(31, 136);
+            this.cmbCountry.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cmbCountry.Name = "cmbCountry";
-            this.cmbCountry.Size = new System.Drawing.Size(121, 28);
+            this.cmbCountry.Size = new System.Drawing.Size(82, 21);
             this.cmbCountry.TabIndex = 8;
             this.cmbCountry.SelectedIndexChanged += new System.EventHandler(this.cmbCountry_SelectedIndexChanged);
             // 
@@ -129,18 +135,20 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(43, 187);
+            this.label2.Location = new System.Drawing.Point(29, 122);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 20);
+            this.label2.Size = new System.Drawing.Size(90, 13);
             this.label2.TabIndex = 9;
             this.label2.Text = "Select Country";
             // 
             // btnFindPerson
             // 
             this.btnFindPerson.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFindPerson.Location = new System.Drawing.Point(545, 416);
+            this.btnFindPerson.Location = new System.Drawing.Point(350, 328);
+            this.btnFindPerson.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnFindPerson.Name = "btnFindPerson";
-            this.btnFindPerson.Size = new System.Drawing.Size(160, 35);
+            this.btnFindPerson.Size = new System.Drawing.Size(107, 23);
             this.btnFindPerson.TabIndex = 10;
             this.btnFindPerson.Text = "Find Person";
             this.btnFindPerson.UseVisualStyleBackColor = true;
@@ -148,9 +156,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 450);
+            this.ClientSize = new System.Drawing.Size(654, 361);
             this.Controls.Add(this.btnFindPerson);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.cmbCountry);
@@ -162,6 +170,7 @@
             this.Controls.Add(this.lstAllCountries);
             this.Controls.Add(this.lblAllPeople);
             this.Controls.Add(this.lstAllPeople);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

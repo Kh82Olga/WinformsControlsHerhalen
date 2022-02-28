@@ -19,15 +19,15 @@ namespace WinformsControlsHerhalen
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //var allPeople = SeedPeople.GetPeople();  var yerine asagida IENUmerable kllandik cunku read only olasini istiyoruz. Baskasinin person eklememesi gerekiyor.
-            IEnumerable<Person> allPeople = SeedPeople.GetPeople();
+            //var allPeople = SeedPeople.GetPeople();  
+            IEnumerable<Person> allPeople = SeedPeople.People;
 
             foreach (var item in allPeople)
             {
                 lstAllPeople.Items.Add(item);
             }
 
-            // lstAllPeople.DataSource = allPeople;  Bu ikinci yol, foreqch yerine bu sekildede kullanabiliriz.
+            // lstAllPeople.DataSource = allPeople;  
 
             IEnumerable<Country> allCountries = SeedCountry.GetCountries();
             foreach (var item in allCountries)
@@ -68,12 +68,21 @@ namespace WinformsControlsHerhalen
 
         private void btnFilterByCountry_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+              IEnumerable<Person>list = SeedPeople.People.Where(x => x.Country== Convert.ToInt32(txtFilter.Text)).ToList();
+              lstDemo.DataSource = list;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show (ex.Message);
+                txtFilter.Focus();
+            }
         }
-
         private void cmbCountry_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // With Lamda
+            // With Lambda
 
             //int selected = cmbCountry.SelectedIndex + 1;
             ////MessageBox.Show(selected.ToString());
@@ -89,11 +98,8 @@ namespace WinformsControlsHerhalen
                 {
                     lstDemo.Items.Add(person);
                 }
-
             }
-
         }
-
         private void btnFindPerson_Click(object sender, EventArgs e)
         {
             var person = SeedPeople.People.Find(x => x.Id == (Convert.ToInt32(txtFilter.Text)));

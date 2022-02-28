@@ -8,20 +8,32 @@ namespace WinformsControlsHerhalen
 {
     public class SeedCountry
     {
-        static public List<Country> Countries { get; } = new List<Country>();
+        static public List<Country> listCountries { get; set; }
+        
+
+        static public List<Country> Countries
+        {
+            get 
+            { 
+                return GetCountries(); 
+            }
+            
+        }
+
         static public List<Country>GetCountries()
         {
+            listCountries= new List<Country>();
             var c1 = new Country() { Id = 1, Name = "Belgium" };
             var c2 = new Country() { Id = 2, Name = "France" };
             var c3 = new Country() { Id = 3, Name = "UK" };
             var c4 = new Country() { Id = 4, Name = "Germany" };
 
-            Countries.Add(c1);
-            Countries.Add(c2);
-            Countries.Add(c3);
-            Countries.Add(c4);
+            listCountries.Add(c1);
+            listCountries.Add(c2);
+            listCountries.Add(c3);
+            listCountries.Add(c4);
 
-            return Countries;
+            return listCountries;
         }
     }
 }
